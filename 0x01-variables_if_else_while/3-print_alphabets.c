@@ -6,20 +6,24 @@
  */
 int main(void)
 {
-    char letter;
+    char c;
 
-    letter = 'a';
-    while (letter <= 'z')
+    char d;
+
+
+    c = 'a';
+    d = 'A';
+    while (c <= 'z')
     {
-        putchar(letter);  // Print lowercase letter
-        letter++;         // Move to the next letter
+        putchar(c);  // Print lowercase letter
+        c++;         // Move to the next letter
     }
 
-    letter = 'A';
-    while (letter <= 'Z')
+    d = 'A';
+    while (d <= 'Z')
     {
-        putchar(letter);  // Print uppercase letter
-        letter++;         // Move to the next letter
+        putchar(d);  // Print uppercase letter
+        d++;         // Move to the next letter
     }
 
     putchar('\n');  // Print newline at the end
