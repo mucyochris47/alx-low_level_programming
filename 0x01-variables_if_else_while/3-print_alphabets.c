@@ -11,22 +11,20 @@ int main(void)
     char d;
 
 
-    c = 'a';
-    d = 'A';
-    while (c <= 'z')
-    {
-        putchar(c);  // Print lowercase letter
-        c++;         // Move to the next letter
-    }
+     c = 'a';
+     d = 'A';
+     while
+	    (c <= 'z') {
+                   putchar(c);  
+                   c++;
+	    }   
+    
 
-    d = 'A';
-    while (d <= 'Z')
-    {
-        putchar(d);  // Print uppercase letter
-        d++;         // Move to the next letter
-    }
-
-    putchar('\n');  // Print newline at the end
-
-    return (0);
+     while  (d <= 'Z') {
+                   putchar(d);  
+                   d++;         
+    
+            } 
+     putchar('\n');
+     return (0);
 }
