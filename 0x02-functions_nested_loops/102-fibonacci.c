@@ -1,14 +1,22 @@
 #include <stdio.h>
 
-int main() {
-    int i;
-    long long int first = 1, second = 2, next;
+/**
+ * main - Prints the first 50 Fibonacci numbers, separated by comma and space
+ *
+ * Return: Always 0
+ */
+int main(void)
+{
+    int first = 1, second = 2, next;
+    int count;
 
-    printf("%lld, %lld", first, second); // Print the first two Fibonacci numbers
+    printf("%d, %d", first, second); /* Print the first two Fibonacci numbers */
 
-    for (i = 3; i <= 50; ++i) {
+    for (count = 3; count <= 50; ++count)
+    {
         next = first + second;
-        printf(", %lld", next);
+        printf(", %d", next);
+
         first = second;
         second = next;
     }
