@@ -1,5 +1,13 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point
+ *
+ * This function calculates the sum of all natural numbers below 1024
+ * that are multiples of 3 or 5, and prints the result.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
     int limit = 1024;
@@ -16,5 +24,5 @@ int main(void)
 
     printf("%d\n", sum);
 
-    return 0;
+    return (0);
 }
