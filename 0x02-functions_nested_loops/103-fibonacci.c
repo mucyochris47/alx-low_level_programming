@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    long long int first = 1, second = 2, next;
-    long long int sum = 0;
+    long int first = 1, second = 2, next;
+    long int sum = 0;
 
     while (first <= 4000000) {
         if (first % 2 == 0) {
@@ -13,7 +13,7 @@ int main() {
         second = next;
     }
 
-    printf("%lld\n", sum);
+    printf("%ld\n", sum);
 
     return 0;
 }
