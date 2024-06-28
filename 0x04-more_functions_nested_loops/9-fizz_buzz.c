@@ -1,15 +1,12 @@
-#include <stdio.h>
+void fizz_buzz(void); /* Prototype of the Fizz-Buzz function defined in 9-fizz_buzz.c */
 
-void fizz_buzz(void); // Prototype of the Fizz-Buzz function defined in 9-fizz_buzz.c
+/* Implement the fizz_buzz function here */
 
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-    fizz_buzz(); // Call the Fizz-Buzz function
+int main(void) {
+    fizz_buzz();
+    return (0);
+}
 
-    return 0;
+void fizz_buzz(void) {
+    /* Implement Fizz-Buzz logic */
 }
