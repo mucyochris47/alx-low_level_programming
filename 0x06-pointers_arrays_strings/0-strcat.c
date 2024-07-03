@@ -9,25 +9,23 @@
  */
 char *_strcat(char *dest, const char *src)
 {
-    int dest_len = 0;
-    int i = 0;
+	int dest_len = 0;
+	int i = 0;
 
-    // Find the length of dest
-    while (dest[dest_len] != '\0')
-    {
-        dest_len++;
-    }
+	/* Find the length of dest */
+	while (dest[dest_len] != '\0')
+		dest_len++;
 
-    // Append src to dest
-    while (src[i] != '\0')
-    {
-        dest[dest_len] = src[i];
-        dest_len++;
-        i++;
-    }
+	/* Append src to dest */
+	while (src[i] != '\0')
+	{
+		dest[dest_len] = src[i];
+		dest_len++;
+		i++;
+	}
 
-    // Add '\0' to mark end of string
-    dest[dest_len] = '\0';
+	/* Add '\0' to mark end of string */
+	dest[dest_len] = '\0';
 
-    return dest;
+	return (dest);
 }
