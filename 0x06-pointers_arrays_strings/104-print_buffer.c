@@ -2,13 +2,24 @@
 #include <stdio.h>
 
 /**
- * print_buffer - prints a buffer 10 bytes per line
- * @b: the buffer to print
- * @size: the size of the buffer
+ * print_buffer - Prints a buffer in a particular format
+ * @b: The buffer to print
+ * @size: Number of bytes to print from the buffer
+ *
+ * Description: Prints the content of a buffer in a specific format:
+ *               - 10 bytes per line, each byte printed in hexadecimal
+ *                 separated by spaces
+ *               - Each line shows the byte number in hexadecimal:
+ *                 starting at the position 0 of the buffer
+ *               - If the buffer is NULL, nothing is printed
+ *               - If size is less or equal to 0, nothing is printed
  */
 void print_buffer(char *b, int size)
 {
     int i, j;
+
+    if (b == NULL || size <= 0)
+        return;
 
     for (i = 0; i < size; i += 10)
     {
@@ -21,17 +32,20 @@ void print_buffer(char *b, int size)
             else
                 printf("  ");
 
-            if (j % 2)
-                putchar(' ');
+            if (j % 2 != 0)
+                printf(" ");
         }
-        for (j = 0; j < 10 && i + j < size; j++)
+        
+        for (j = 0; j < 10; j++)
         {
-            if (b[i + j] >= ' ' && b[i + j] <= '~')
-                putchar(b[i + j]);
-            else
-                putchar('.');
+            if (i + j < size)
+            {
+                if (b[i + j] >= 32 && b[i + j] <= 126)
+                    printf("%c", b[i + j]);
+                else
+                    printf(".");
+            }
         }
-        if (i >= size - 10)
-            putchar('\n');
+        printf("\n");
     }
 }
