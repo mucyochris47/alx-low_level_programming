@@ -9,7 +9,7 @@ int _strcmp(const char *s1, const char *s2);
 void reverse_array(int *, int);
 char *string_toupper(char *);
 char *cap_string(char *);
-char *leet(char *);
+char *leet(char *str);
 char *rot13(char *);
 void print_number(int);
 void print_triangle(int);
