@@ -14,5 +14,6 @@ char *rot13(char *);
 void print_number(int);
 void print_triangle(int);
 void print_square(int size);
+void print_buffer(char *b, int size);
 
 #endif /* MAIN_H */
