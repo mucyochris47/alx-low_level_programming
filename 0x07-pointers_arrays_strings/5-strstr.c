@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h> // Include for NULL definition
+#include <stddef.h> /* Include for NULL definition */
 
 /**
  * _strstr - Locates a substring
@@ -21,11 +21,11 @@ char *_strstr(char *haystack, char *needle)
             h++;
             n++;
         }
-        if (!*n) // If we reached the end of needle (found the substring)
+        if (!*n) /* If we reached the end of needle (found the substring) */
             return haystack;
 
         haystack++;
     }
 
-    return NULL; // Return NULL if substring not found
+    return NULL; /* Return NULL if substring not found */
 }
