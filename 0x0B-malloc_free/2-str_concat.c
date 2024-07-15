@@ -3,8 +3,8 @@
 
 /**
  * str_concat - concatenates two strings
- * @s1: first string
- * @s2: second string
+ * @s1: first string (can be NULL)
+ * @s2: second string (can be NULL)
  *
  * Return: pointer to a newly allocated space in memory containing
  * the concatenated string, or NULL on failure
@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 		concat[i] = s1[i];
 
 	for (j = 0; j <= len2; j++)
-		concat[len1 + j] = s2[j];
+		concat[len1 + j] = s2 == NULL ? '\0' : s2[j];
 
 	return (concat);
 }
