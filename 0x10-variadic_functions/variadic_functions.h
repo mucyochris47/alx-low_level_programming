@@ -1,9 +1,10 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
-#include <stdarg.h>
+#include <stddef.h>  /* Include this for NULL definition */
 
-void print_numbers(const char *separator, const unsigned int n, ...);
+/* Prototype for print_strings function */
+void print_strings(const char *separator, const unsigned int n, ...);
 
 #endif /* VARIADIC_FUNCTIONS_H */
 
