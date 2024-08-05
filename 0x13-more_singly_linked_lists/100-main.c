@@ -1,47 +1,29 @@
-#include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "lists.h"
 
 /**
- * main - Entry point for testing reverse_listint function.
+ * main - check the code
  *
- * Return: Always 0 (Success)
+ * Return: Always 0.
  */
 int main(void)
 {
     listint_t *head;
-    listint_t *new_node;
-    listint_t *reversed;
 
     head = NULL;
-
-    // Create and add some nodes to the list
-    new_node = add_nodeint_end(&head, 1);
-    if (new_node == NULL)
-        return (EXIT_FAILURE);
-
-    new_node = add_nodeint_end(&head, 2);
-    if (new_node == NULL)
-        return (EXIT_FAILURE);
-
-    new_node = add_nodeint_end(&head, 3);
-    if (new_node == NULL)
-        return (EXIT_FAILURE);
-
-    new_node = add_nodeint_end(&head, 4);
-    if (new_node == NULL)
-        return (EXIT_FAILURE);
-
-    printf("Original list:\n");
+    add_nodeint_end(&head, 0);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 2);
+    add_nodeint_end(&head, 3);
+    add_nodeint_end(&head, 4);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 402);
+    add_nodeint_end(&head, 1024);
     print_listint(head);
-
-    reversed = reverse_listint(&head);
-
-    printf("Reversed list:\n");
-    print_listint(reversed);
-
+    reverse_listint(&head);
+    print_listint(head);    
     free_listint2(&head);
-
-    return (EXIT_SUCCESS);
+    return (0);
 }
-
